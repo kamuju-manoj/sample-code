@@ -1,0 +1,33 @@
+<html>
+<head>
+<script src="scripts/angular.js"></script>
+<script src="scripts/controller.js"></script>
+<script src="scripts/angular-route.js"></script>
+<!--script src="scripts/route.js"></script-->
+<style>
+input
+{
+padding: 2 px;
+margin: 5px;
+}
+</style>
+</head>
+<body ng-app="myApp">
+<div ng-controller="addProduct">
+Product Title: <input ng-model="pTitle"> <br/>
+Product Price: <input ng-model="pPrice"> <br/>
+Items Available: <input ng-model="pAvail"> <br/>
+Category : <select ng-model="pcategory">
+			<option value="1">Mobiles</option>
+			<option value="2">Pens</option>
+			<option value="3">Camera</option>
+			<option value="4">Books</option>
+			<option value="5">Clothes</option>
+			<option value="6">Sports</option>
+			</select>
+<!--Product Image: <input type="file" ng-model="pImage"> <br/-->
+<input type ="button" value="Add" ng-click="addProd()"> <br/>
+<span style="margin:2px" ng-model="msg">{{msg}}</span>
+</div>
+</body>
+</html>

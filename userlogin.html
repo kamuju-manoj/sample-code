@@ -1,0 +1,29 @@
+<style>
+input
+{
+padding: 2 px;
+margin: 5px;
+}
+div{
+float:left;
+width: 450px;
+height:400px;
+}
+</style>
+</head>
+<body ng-app="myApp">
+<div ng-controller="loginUser">
+<h3>User Login</h3>
+Email: <input type="email" ng-model="email" > <br/>
+Password: <input type="password" ng-model="pwd">	<br/>
+<input type="button" value="Login" ng-click="login()" >
+</div>
+<div ng-controller="registerUser">
+<h3>User Registeration</h3>
+User Name: <input type="text" ng-model="uname">	<br/>
+Email:	<input type="email" ng-model="email" >	<br/> 
+Password:	<input type="password" ng-model="pwd" >	<br/>
+<input type="button" value="register" ng-click="register()">	<br/>
+</div>
+</body>
+</html>

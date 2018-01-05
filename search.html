@@ -1,0 +1,27 @@
+<style>
+input
+{
+padding:3px;
+margin:10px;
+}
+</style>
+<hr/>
+<h3>Seach Our Products Here</h3>
+<hr/>
+
+Name : <input ng-model="sname">
+Category : <select ng-model="scategory">
+			<option value="1">Mobiles</option>
+			<option value="2">Pens</option>
+			<option value="3">Camera</option>
+			<option value="4">Books</option>
+			<option value="5">Clothes</option>
+			<option value="6">Sports</option>
+			</select>
+{{scategory}}			
+Price1: <input type="range" ng-model="sprice1"  min ="0" max="45000">{{sprice1}} <br/>
+Price2: <input type="range" ng-model="sprice2"  min ="45000" max="90000">{{sprice2}} <br/>
+
+<div ng-repeat="item in searchData | filter: sname" ng-if="item.category == scategory">
+{{item.product_name}}
+</div>

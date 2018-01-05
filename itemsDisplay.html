@@ -1,0 +1,17 @@
+<div style="border:2px solid black;display:inline-block;padding:1.5px;float:right;">
+<a href='#!cart'>Cart Items </a> {{cartItemsSelected}}
+</div>
+	<div ng-repeat="product in products | pagination : currentPage*5|limitTo : 5">
+		<h5>{{product.product_name}}</h5>
+		<span>Price</span> <span>{{product.product_price}}</span><br/>
+		<span>Product's Availability : </span><span>{{product.product_availability}}</span>
+		<input type="button" value="Add To Cart" ng-click="addToCart(product.product_id)" style="float:right">
+		<hr/>
+</div>
+    <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numberOfPages()}}
+    <button ng-disabled="currentPage >= length/5 - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
